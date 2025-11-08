@@ -32,13 +32,14 @@ git push -u origin main
 1. Acesse [vercel.com/new](https://vercel.com/new)
 2. Clique em "Import Git Repository"
 3. Selecione seu repositório `quantum-cert`
-4. Configure o projeto:
-   - **Framework Preset:** Vite
-   - **Build Command:** `npm run build` (já configurado automaticamente)
-   - **Output Directory:** `dist` (já configurado automaticamente)
-   - **Install Command:** `npm install`
+4. A Vercel detectará automaticamente as configurações do Vite:
+   - **Framework Preset:** Vite (detectado automaticamente)
+   - **Build Command:** `npm run build` (detectado automaticamente)
+   - **Output Directory:** `dist` (detectado automaticamente)
+   - **Install Command:** `npm install` (detectado automaticamente)
 
-5. Clique em "Deploy"
+5. **NÃO** altere nenhuma configuração - deixe os valores padrão
+6. Clique em "Deploy"
 
 ### Passo 3: Configurar Domínio (Opcional)
 

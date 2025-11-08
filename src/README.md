@@ -152,7 +152,7 @@ Seja um Early Adopter e receba:
 
 ## 📄 Licença
 
-© 2025 Quantum.Cert. Todos os direitos reservados.
+© 2025 QUANTUM CERT. Todos os direitos reservados.
 
 ## 🆘 Suporte
 

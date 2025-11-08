@@ -218,7 +218,7 @@ export function DashboardPage({ onLogout }: DashboardPageProps) {
           <div className="flex items-center gap-2">
             <img src={logo} alt="Logo" className="w-10 h-10" />
             <span className="bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
-              QUANTUM.CERT
+              QUANTUM CERT
             </span>
           </div>
           <button
@@ -570,7 +570,7 @@ export function DashboardPage({ onLogout }: DashboardPageProps) {
                   <div className="space-y-2">
                     <Label>Nome da Organização</Label>
                     <Input
-                      defaultValue="Quantum.Cert"
+                      defaultValue="QUANTUM CERT"
                       className="bg-secondary/30 border-border"
                     />
                   </div>

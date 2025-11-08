@@ -12,7 +12,7 @@ export function LoadingScreen() {
         >
           <motion.img
             src={logo}
-            alt="Quantum.Cert Logo"
+            alt="QUANTUM CERT Logo"
             className="w-24 h-24"
             animate={{
               rotateY: [0, 360],
@@ -30,7 +30,7 @@ export function LoadingScreen() {
           transition={{ delay: 0.5 }}
           className="text-primary tracking-wider"
         >
-          QUANTUM.CERT
+          QUANTUM CERT
         </motion.div>
       </div>
     </div>

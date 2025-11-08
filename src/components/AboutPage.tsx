@@ -43,9 +43,9 @@ export function AboutPage({ onBack }: AboutPageProps) {
       <header className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Quantum.Cert Logo" className="w-10 h-10" />
+            <img src={logo} alt="QUANTUM CERT Logo" className="w-10 h-10" />
             <span className="tracking-wider bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
-              QUANTUM.CERT
+              QUANTUM CERT
             </span>
           </div>
 
@@ -73,7 +73,7 @@ export function AboutPage({ onBack }: AboutPageProps) {
               Provas Digitais Eternas e Auditáveis
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A Quantum.Cert elimina a dependência de cartórios e certificadoras tradicionais,
+              A QUANTUM CERT elimina a dependência de cartórios e certificadoras tradicionais,
               oferecendo um sistema de certificação inviolável com validade jurídica permanente.
               Democratizamos o acesso à confiança digital para todos.
             </p>
@@ -109,7 +109,7 @@ export function AboutPage({ onBack }: AboutPageProps) {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p className="text-lg">
-                  A <span className="text-primary">Quantum.Cert</span> propõe uma nova era de confiança digital,
+                  A <span className="text-primary">QUANTUM CERT</span> propõe uma nova era de confiança digital,
                   criando um sistema de certificação inviolável e com{" "}
                   <span className="text-primary">validade jurídica permanente</span>. Eliminamos a dependência
                   de cartórios e certificadoras tradicionais, oferecendo segurança contra falsificações e até
@@ -129,7 +129,7 @@ export function AboutPage({ onBack }: AboutPageProps) {
                 </p>
                 <p className="text-lg">
                   Seja para documentos, contratos, obras de arte, NFTs, produtos físicos ou identidades,
-                  a Quantum.Cert oferece soluções completas para empresas, educação, arte e uso pessoal.
+                  a QUANTUM CERT oferece soluções completas para empresas, educação, arte e uso pessoal.
                 </p>
               </div>
             </Card>
@@ -305,7 +305,7 @@ export function AboutPage({ onBack }: AboutPageProps) {
                 Pronto para Certificar Seus Ativos?
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Junte-se às organizações que confiam na Quantum.Cert para proteger e
+                Junte-se às organizações que confiam na QUANTUM CERT para proteger e
                 autenticar seus ativos mais valiosos — sem renovações, sem intermediários, para sempre
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -328,13 +328,13 @@ export function AboutPage({ onBack }: AboutPageProps) {
       <footer className="border-t border-border py-12 px-4">
         <div className="container mx-auto max-w-6xl text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <img src={logo} alt="Quantum.Cert Logo" className="w-10 h-10" />
+            <img src={logo} alt="QUANTUM CERT Logo" className="w-10 h-10" />
             <span className="tracking-wider bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
-              QUANTUM.CERT
+              QUANTUM CERT
             </span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2025 Quantum.Cert. Todos os direitos reservados.
+            © 2025 QUANTUM CERT. Todos os direitos reservados.
           </p>
         </div>
       </footer>

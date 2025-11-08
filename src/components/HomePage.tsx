@@ -7,9 +7,10 @@ import logo from "figma:asset/a193dcea5c017d729537e1e9c23d30dbccfd591e.png";
 interface HomePageProps {
   onLogin: () => void;
   onAbout: () => void;
+  onEarlyAdopters: () => void;
 }
 
-export function HomePage({ onLogin, onAbout }: HomePageProps) {
+export function HomePage({ onLogin, onAbout, onEarlyAdopters }: HomePageProps) {
   const services = [
     {
       title: "Empresas",
@@ -69,9 +70,9 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
       <header className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Quantum.Cert Logo" className="w-10 h-10" />
+            <img src={logo} alt="QUANTUM CERT Logo" className="w-10 h-10" />
             <span className="tracking-wider bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
-              QUANTUM.CERT
+              QUANTUM CERT
             </span>
           </div>
 
@@ -179,16 +180,20 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="bg-card border-border p-6 hover:border-primary transition-all h-full">
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                    <span className="text-2xl">🔒</span>
-                  </div>
-                  <h3 className="text-xl mb-2">Certificação Quântica Universal</h3>
+              <Card className="bg-card border-border overflow-hidden hover:border-primary transition-all h-full group">
+                <div className="aspect-video relative overflow-hidden">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1704243962105-28a67b2271c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFudHVtJTIwZW5jcnlwdGlvbnxlbnwxfHx8fDE3NjI1NzE2MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Certificação Quântica Universal"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Registro digital imutável de documentos, contratos, obras, NFTs e certificados com validade jurídica permanente
-                </p>
+                <div className="p-6">
+                  <h3 className="text-xl mb-2">Certificação Quântica Universal</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Registro digital imutável de documentos, contratos, obras, NFTs e certificados com validade jurídica permanente
+                  </p>
+                </div>
               </Card>
             </motion.div>
 
@@ -198,21 +203,25 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <Card className="bg-card border-border p-6 hover:border-primary transition-all h-full">
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                    <span className="text-2xl">🏷️</span>
-                  </div>
-                  <h3 className="text-xl mb-2">QTAGs Inteligentes</h3>
+              <Card className="bg-card border-border overflow-hidden hover:border-primary transition-all h-full group">
+                <div className="aspect-video relative overflow-hidden">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1754494977432-425fb917df70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZmMlMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc2MjU3MTYyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="QTAGs Inteligentes"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Etiquetas com NFC quântico para autenticação física:
-                </p>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• <span className="text-primary">QTAG Física:</span> Produtos e obras</li>
-                  <li>• <span className="text-primary">QTAG Life:</span> ID médica de emergência</li>
-                  <li>• <span className="text-primary">QTAG Pet:</span> Identificação de animais</li>
-                </ul>
+                <div className="p-6">
+                  <h3 className="text-xl mb-2">QTAGs Inteligentes</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Etiquetas com NFC quântico para autenticação física:
+                  </p>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• <span className="text-primary">QTAG Física:</span> Produtos e obras</li>
+                    <li>• <span className="text-primary">QTAG Life:</span> ID médica de emergência</li>
+                    <li>• <span className="text-primary">QTAG Pet:</span> Identificação de animais</li>
+                  </ul>
+                </div>
               </Card>
             </motion.div>
 
@@ -222,16 +231,20 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card className="bg-card border-border p-6 hover:border-primary transition-all h-full">
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                    <span className="text-2xl">📦</span>
-                  </div>
-                  <h3 className="text-xl mb-2">QTRACK</h3>
+              <Card className="bg-card border-border overflow-hidden hover:border-primary transition-all h-full group">
+                <div className="aspect-video relative overflow-hidden">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1697057406467-60340e993e6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMHRyYWNraW5nfGVufDF8fHx8MTc2MjU3MTYyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="QTRACK"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Sistema completo de rastreabilidade de produtos e cadeias produtivas com transparência total
-                </p>
+                <div className="p-6">
+                  <h3 className="text-xl mb-2">QTRACK</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sistema completo de rastreabilidade de produtos e cadeias produtivas com transparência total
+                  </p>
+                </div>
               </Card>
             </motion.div>
 
@@ -241,19 +254,23 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Card className="bg-card border-primary/40 p-6 hover:border-primary transition-all h-full border-2">
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                    <span className="text-2xl">🤝</span>
-                  </div>
-                  <h3 className="text-xl mb-2">Programa de Afiliados</h3>
+              <Card className="bg-card border-primary/40 overflow-hidden hover:border-primary transition-all h-full border-2 group">
+                <div className="aspect-video relative overflow-hidden">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1750816204148-5d02aff367cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZmZpbGlhdGUlMjBwcm9ncmFtfGVufDF8fHx8MTc2MjU3MTYyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Programa de Afiliados"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground mb-2">
-                  <span className="text-primary">10 certificações gratuitas</span> + <span className="text-primary">5% de comissão vitalícia</span>
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Adoção antecipada garante vantagens no pré-lançamento
-                </p>
+                <div className="p-6">
+                  <h3 className="text-xl mb-2">Programa de Afiliados</h3>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="text-primary">10 certificações gratuitas</span> + <span className="text-primary">5% de comissão vitalícia</span>
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Adoção antecipada garante vantagens no pré-lançamento
+                  </p>
+                </div>
               </Card>
             </motion.div>
           </div>
@@ -283,8 +300,12 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">⚖️</span>
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZWdhbCUyMGRvY3VtZW50c3xlbnwxfHx8fDE3NjI1MDMxMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Validade Jurídica"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl mb-3">Validade Jurídica Permanente</h3>
               <p className="text-muted-foreground">
@@ -299,8 +320,12 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">💰</span>
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1589829068065-20154e8f9642?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbm5vdmF0aW9uJTIwcmV3YXJkc3xlbnwxfHx8fDE3NjI1NzE2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Zero Custos"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl mb-3">Zero Custos de Renovação</h3>
               <p className="text-muted-foreground">
@@ -315,8 +340,12 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🛡️</span>
+              <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1617839625591-e5a789593135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFudHVtJTIwY29tcHV0aW5nfGVufDF8fHx8MTc2MjUyNTYzMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Proteção Quântica"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl mb-3">Proteção Quântica</h3>
               <p className="text-muted-foreground">
@@ -520,7 +549,7 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                onClick={onAbout}
+                onClick={onEarlyAdopters}
               >
                 Conhecer o Programa
               </Button>
@@ -560,9 +589,9 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src={logo} alt="Quantum.Cert Logo" className="w-10 h-10" />
+                <img src={logo} alt="QUANTUM CERT Logo" className="w-10 h-10" />
                 <span className="tracking-wider bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
-                  QUANTUM.CERT
+                  QUANTUM CERT
                 </span>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -579,7 +608,7 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
                   </a>
                 </li>
                 <li>
-                  <button onClick={onAbout} className="hover:text-primary transition-colors">
+                  <button onClick={onEarlyAdopters} className="hover:text-primary transition-colors">
                     Programa de Afiliados
                   </button>
                 </li>
@@ -635,7 +664,7 @@ export function HomePage({ onLogin, onAbout }: HomePageProps) {
           </div>
 
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 Quantum.Cert. Todos os direitos reservados.</p>
+            <p>© 2025 QUANTUM CERT. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

@@ -30,9 +30,9 @@ export function LoginPage({ onBack, onLoginSuccess }: LoginPageProps) {
     <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center flex flex-col items-center">
-          <img src={logo} alt="Quantum.Cert Logo" className="w-20 h-20 mb-4" />
+          <img src={logo} alt="QUANTUM CERT Logo" className="w-20 h-20 mb-4" />
           <h1 className="text-3xl mb-2 bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
-            QUANTUM.CERT
+            QUANTUM CERT
           </h1>
           <p className="text-muted-foreground">
             Certificação de Ativos com Blockchain

@@ -4,10 +4,11 @@ import { HomePage } from "./components/HomePage";
 import { LoginPage } from "./components/LoginPage";
 import { AboutPage } from "./components/AboutPage";
 import { DashboardPage } from "./components/DashboardPage";
+import { EarlyAdoptersPage } from "./components/EarlyAdoptersPage";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState<"home" | "login" | "about" | "dashboard">("home");
+  const [currentPage, setCurrentPage] = useState<"home" | "login" | "about" | "dashboard" | "early-adopters">("home");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -18,6 +19,11 @@ export default function App() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Scroll to top whenever page changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [currentPage]);
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
@@ -46,6 +52,10 @@ export default function App() {
     return <AboutPage onBack={() => setCurrentPage("home")} />;
   }
 
+  if (currentPage === "early-adopters") {
+    return <EarlyAdoptersPage onBack={() => setCurrentPage("home")} />;
+  }
+
   if (currentPage === "dashboard" && isAuthenticated) {
     return <DashboardPage onLogout={handleLogout} />;
   }
@@ -54,6 +64,7 @@ export default function App() {
     <HomePage
       onLogin={() => setCurrentPage("login")}
       onAbout={() => setCurrentPage("about")}
+      onEarlyAdopters={() => setCurrentPage("early-adopters")}
     />
   );
 }
